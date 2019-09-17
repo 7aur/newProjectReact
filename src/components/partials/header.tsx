@@ -1,16 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 const { Link } = require('react-router-dom');
 const miniLogo = require('../../assets/sass/icons/logos.png');
 const defUser = require('../../assets/sass/icons/default-user.png');
 export function Header(): JSX.Element {
+
+    const [value, stateValue] = useState<boolean>(false);
+    const [srcVal, searchValue] = useState<boolean>(false);
+    const [hambVal, hamburgerValue] = useState<boolean>(false);
+    let removeBanner = () => {
+        stateValue(true);
+    }
+
+    let openSearch = () => {
+        searchValue(true);
+    }
+    let closeSearch = () => {
+        searchValue(false);
+    }
+
+    let hamburgerMenu = () => {
+        hambVal ?  hamburgerValue(false) : hamburgerValue(true);
+    }
+
     return (
         <React.Fragment>
-            <section className="banner-section">
-                <div className="container-fluid">
-                    <Link to="/loremas"> New Resident Evil 2 Remake Release PRE ORDER NOW : <span className="waves-effect" > BUY </span> <i className="icon-arrow-right white"></i>  </Link>
-                    <button type="button"  > <i className="icon-cancel white"></i> </button>
-                </div>
-            </section>
+            {
+                value === true ? null :
+                    <section className="banner-section">
+                        <div className="container-fluid">
+                            <Link to="/loremas"> New Resident Evil 2 Remake Release PRE ORDER NOW : <span className="waves-effect" > BUY </span> <i className="icon-arrow-right white"></i>  </Link>
+                            <button type="button" onClick={removeBanner} > <i className="icon-cancel white"></i> </button>
+                        </div>
+                    </section>
+            }
             <header>
                 <div className="container">
                     <div className="row">
@@ -21,10 +43,10 @@ export function Header(): JSX.Element {
                                 </div>
                             </div>
                             <div className="header-right">
-                                <div className="menu">
+                                <div className={'menu ' + (hambVal ? 'active' : '')}>
                                     <ul className="menus">
                                         <li>
-                                            <Link to="/admin" className="dropdown-m">  Profile
+                                            <Link to="/profile" className="dropdown-m">  Profile
                                             <span className="profile-span">
                                                     <img src={defUser} alt="" />
                                                 </span>
@@ -69,7 +91,7 @@ export function Header(): JSX.Element {
                                         </li>
                                     </ul>
                                 </div>
-                                <button type="button" className="mobile-bt">
+                                <button type="button" className="mobile-bt" onClick={hamburgerMenu} >
                                     <i className="line"></i>
                                     <i className="line"></i>
                                     <i className="line"></i>
@@ -78,7 +100,7 @@ export function Header(): JSX.Element {
                                     <i className="line"></i>
                                 </button>
                                 <div className="search-block">
-                                    <button type="button" className="default-btn"> <i className="icon-search white"></i> </button>
+                                    <button type="button" className="default-btn" onClick={openSearch } > <i className="icon-search white"></i> </button>
                                 </div>
                             </div>
                         </div>
@@ -86,8 +108,8 @@ export function Header(): JSX.Element {
                 </div>
                 <div className="top-line"></div>
             </header>
-            <div className="search-form" >
-                <button type="button" className="close-search"  > <i className="icon-cancel white"></i> </button>
+            <div className={'search-form ' + (srcVal === true ? 'active' : '')} >
+                <button type="button" className="close-search"  onClick={closeSearch}> <i className="icon-cancel white"></i> </button>
                 <form action="" method="" >
                     <input type="text" className="search-input" placeholder="search" />
                     <button type="submit" className="default-btn btn-green white">  search  </button>

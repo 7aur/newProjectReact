@@ -15,7 +15,7 @@ export function BlogSingle(): JSX.Element {
                                     <span> <a href="#"> Admin </a> Posted On December 14, 2018 </span>
                                 </div>
                                 <div className="blog-image">
-                                    <img src="assets/image/blog/road.gif" alt="Why White Space is" />
+                                    <img src={blogImage} alt="Why White Space is" />
                                 </div>
                                 <div className="blog-category">
                                     <span> Categories :  </span>

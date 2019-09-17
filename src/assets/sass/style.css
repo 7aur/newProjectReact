@@ -657,6 +657,10 @@ header {
 .banner-section a {
   font-family: "Montserrat-Regular";
   font-size: 16px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   color: #fff;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out; }
@@ -667,11 +671,13 @@ header {
 .banner-section span {
   border: 1px solid #fff;
   padding: 5px 10px;
+  margin-left: 10px;
   color: #fff;
   margin-right: 15px; }
 
 .banner-section button {
   position: absolute;
+  top: 23px;
   right: 20px; }
 
 header {
@@ -1229,7 +1235,7 @@ body {
   margin-bottom: 0;
   display: flex;
   justify-content: center;
-  width: 20%; }
+  width: 100%; }
 
 .company-slider.owl-slider li a {
   width: 95%; }

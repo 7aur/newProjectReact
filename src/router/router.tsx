@@ -18,14 +18,13 @@ import { Video }            from    '../components/pages/video/video';
 import { VideoSingle }      from    '../components/pages/video/video-single';
 import { Admin }            from    '../admin/admin';
 import { AdminInsert }      from    '../admin/admin-insert';
+import { ErrorPage }        from    '../components/pages/404/404';
 
 export let routes = [
     { path: "/",                component: Home },
     { path: "/login",           component: Login },
     { path: "/register",        component: Register },
     { path: "/about",           component: About },
-    { path: "/blog",            component: Blog },
-    { path: "/blogsingle",      component: BlogSingle },
     { path: "/contact",         component: Contact },
     { path: "/gallery",         component: Gallery },
     { path: "/gallerysingle",   component: GallerySIngle },
@@ -36,5 +35,8 @@ export let routes = [
     { path: "/videosingle",     component: VideoSingle },
     { path: "/company",         component: Company },
     { path: "/admin",           component: Admin },
-    { path: "/adminAdd",        component: AdminInsert }
+    { path: "/adminAdd",        component: AdminInsert },
+    { path: "/blog",            component: Blog },
+    { path: "/blog/:id",        component: BlogSingle },
+    { path: "*",                component: ErrorPage },
 ];

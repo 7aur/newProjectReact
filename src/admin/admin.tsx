@@ -1,4 +1,5 @@
 import React from 'react';
+const bgImage = require('../assets/images/slider/image1.jpg');
 export function Admin(): JSX.Element {
     return (
         <section className="default-section admin-section">
@@ -82,7 +83,7 @@ export function Admin(): JSX.Element {
                                                 <td > 1 </td>
                                                 <td> Resident evil remake 2 rumour </td>
                                                 <td> www.youtube.com </td>
-                                                <td className="wh-nowrap">  <div className="mini-image"> <img src="assets/image/slider/image1.jpg" alt="" />  </div> </td>
+                                                <td className="wh-nowrap">  <div className="mini-image"> <img src={bgImage} alt="" />  </div> </td>
                                                 <td className="wh-nowrap">
                                                     <button type="button" className="mini-button btn-primary waves-effect"> <i className="fa fa-edit"></i> </button>
                                                     <button type="button" className="mini-button btn-danger waves-effect"> <i className="fa fa-remove"></i> </button>
@@ -108,7 +109,7 @@ export function Admin(): JSX.Element {
                                                 <td > 1 </td>
                                                 <td> www.youtube.com </td>
                                                 <td> Resident evil remake 2 rumour </td>
-                                                <td className="wh-nowrap">  <div className="mini-image"> <img src="assets/image/slider/image1.jpg" alt="" />  </div> </td>
+                                                <td className="wh-nowrap">  <div className="mini-image"> <img src={bgImage} alt="" />  </div> </td>
                                                 <td className="wh-nowrap">
                                                     <button type="button" className="mini-button btn-primary waves-effect"> <i className="fa fa-edit"></i> </button>
                                                     <button type="button" className="mini-button btn-danger waves-effect"> <i className="fa fa-remove"></i> </button>
@@ -134,7 +135,7 @@ export function Admin(): JSX.Element {
                                                 <td > 1 </td>
                                                 <td> Resident Evil remake 2 </td>
                                                 <td> Game </td>
-                                                <td className="wh-nowrap">  <div className="mini-image"> <img src="assets/image/slider/image1.jpg" alt="" />  </div> </td>
+                                                <td className="wh-nowrap">  <div className="mini-image"> <img src={bgImage} alt="" />  </div> </td>
                                                 <td className="wh-nowrap">
                                                     <button type="button" className="mini-button btn-primary waves-effect"> <i className="fa fa-edit"></i> </button>
                                                     <button type="button" className="mini-button btn-danger waves-effect"> <i className="fa fa-remove"></i> </button>
@@ -160,7 +161,7 @@ export function Admin(): JSX.Element {
                                                 <td > 1 </td>
                                                 <td> Resident Evil remake 2 </td>
                                                 <td> Game </td>
-                                                <td className="wh-nowrap">  <div className="mini-image"> <img src="assets/image/slider/image1.jpg" alt="" />  </div> </td>
+                                                <td className="wh-nowrap">  <div className="mini-image"> <img src={bgImage} alt="" />  </div> </td>
                                                 <td className="wh-nowrap">
                                                     <button type="button" className="mini-button btn-primary waves-effect"> <i className="fa fa-edit"></i> </button>
                                                     <button type="button" className="mini-button btn-danger waves-effect"> <i className="fa fa-remove"></i> </button>
